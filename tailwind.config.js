@@ -7,5 +7,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@heroicons/react/20/solid')
   ],
 }

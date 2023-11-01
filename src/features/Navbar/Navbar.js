@@ -2,6 +2,7 @@ import React, { useState ,Fragment} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import logo from "../../logo.png"
 
 const user = {
   name: 'Tom Cook',
@@ -10,11 +11,11 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Home', href: '#', current: true },
+  { name: 'Shop', href: '#', current: false },
+  { name: 'About Us', href: '#', current: false },
+  { name: 'Categories', href: '#', current: false },
+  { name: 'Contact Us', href: '#', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -37,8 +38,8 @@ export default  function Navbar({children}) {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <img
-                    className="h-8 w-8"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="h-12 w-12"
+                    src={logo}
                     alt="Your Company"
                   />
                 </div>
