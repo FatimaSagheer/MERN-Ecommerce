@@ -1,7 +1,7 @@
 export function fetchAllProducts() {
   return new Promise(async (resolve) =>{
     //TODO: we will not hard-code server URL here
-    const response = await fetch('http://localhost:808q/products') 
+    const response = await fetch('http://localhost:8081/products') 
     const data = await response.json()
     resolve({data})
   }
@@ -37,6 +37,22 @@ export function fetchProductsByFilters(filter,sort,pagination) {
     //X-Total-Count. The total number of records in the full collection.
     const totalItems = await response.headers.get('X-Total-Count')
     resolve({data:{products:data,totalItems:+totalItems}})
+  }
+  );
+}
+export function fetchBrands() {
+  return new Promise(async (resolve) =>{
+    const response = await fetch('http://localhost:8081/brands') 
+    const data = await response.json()
+    resolve({data})
+  }
+  );
+}
+export function fetchCategories() {
+  return new Promise(async (resolve) =>{
+    const response = await fetch('http://localhost:8081/categories') 
+    const data = await response.json()
+    resolve({data})
   }
   );
 }
