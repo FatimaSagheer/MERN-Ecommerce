@@ -14,6 +14,7 @@ import {
 ///features/Auth/AuthSlice
 import { useState } from 'react';
 import { addOrderAsync, selectCurrentOrder } from '../Order/OrderSlice';
+import { selectUserInfo } from '../../features/User/UserSlice';
 
 function Checkout() {
   const dispatch = useDispatch();

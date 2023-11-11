@@ -35,11 +35,12 @@
         "https://i.dummyjson.com/data/products/2/2.jpg",
         "https://i.dummyjson.com/data/products/2/3.jpg",
         "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-      ]
+      ],
+      "deleted": true
     },
     {
       "id": 3,
-      "title": "Samsung Universe 9",
+      "title": "Samsung Universe 9 abc",
       "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
       "price": 1249,
       "discountPercentage": 15.46,
@@ -49,7 +50,10 @@
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
+        "https://i.dummyjson.com/data/products/3/1.jpg",
+        "https://i.dummyjson.com/data/products/3/1.jpg",
+        "https://i.dummyjson.com/data/products/3/1.jpg",
+        "https://i.dummyjson.com/data/products/3/thumbnail.jpg"
       ]
     },
     {
@@ -1838,6 +1842,24 @@
         "https://i.dummyjson.com/data/products/100/3.jpg",
         "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
       ]
+    },
+    {
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super ",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 1234,
+      "discountPercentage": 2,
+      "stock": 12343,
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ],
+      "rating": 0,
+      "id": 101
     }
   ],
   "brands": [
@@ -2338,16 +2360,8 @@
     {
       "email": "fsagheer11@gmail.com",
       "password": "Fatima12345",
+      "role": "user",
       "addresses": [
-        {
-          "name": "Fatima",
-          "email": "fsagheer11@gmail.com",
-          "phone": "1234567788",
-          "street": "11th Main",
-          "city": "Banaglore",
-          "state": "Karnataka",
-          "pinCode": "560034"
-        },
         {
           "name": "Fatima ",
           "email": "fsagheer11@gmail.com",
@@ -2360,11 +2374,11 @@
         {
           "name": "Omer Haider Sagheer",
           "email": "Sscomergyder28@gmail.com",
-          "phone": "3434434343",
-          "street": "Tehsil kaberwala village 5 kassi",
-          "city": "Kabirwala",
+          "city": "Kabirwaladcdncdknckd",
           "state": "Punjab",
-          "pinCode": "58150"
+          "pinCode": "58150",
+          "phone": "3434434343",
+          "street": "Tehsil kaberwala village 5 kassi"
         }
       ],
       "id": 1
@@ -2374,6 +2388,18 @@
       "password": "Qwerty123",
       "addresses": [],
       "id": 2
+    },
+    {
+      "email": "aminasagheer123@gmail.com",
+      "password": "Amina@12345",
+      "id": 3
+    },
+    {
+      "email": "aminasagheer@gmail.com",
+      "password": "Amina12345",
+      "addresses": [],
+      "role": "admin",
+      "id": 4
     }
   ],
   "cart": [
@@ -2414,64 +2440,63 @@
       "user": 2
     },
     {
-      "id": 8,
-      "title": "Microsoft Surface Laptop 4",
-      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-      "price": 1499,
-      "discountPercentage": 10.23,
-      "rating": 4.43,
-      "stock": 68,
-      "brand": "Microsoft Surface",
-      "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+      "id": 2,
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/8/1.jpg",
-        "https://i.dummyjson.com/data/products/8/2.jpg",
-        "https://i.dummyjson.com/data/products/8/3.jpg",
-        "https://i.dummyjson.com/data/products/8/4.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/2.jpg",
+        "https://i.dummyjson.com/data/products/2/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": 3
+    },
+    {
+      "id": 1,
+      "title": "iPhone 9",
+      "description": "An apple mobile which is nothing like apple",
+      "price": 549,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/1/1.jpg",
+        "https://i.dummyjson.com/data/products/1/2.jpg",
+        "https://i.dummyjson.com/data/products/1/3.jpg",
+        "https://i.dummyjson.com/data/products/1/4.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
       ],
       "quantity": 1,
       "user": 1
     },
     {
-      "id": 46,
-      "title": "women's shoes",
-      "description": "Close: Lace, Style with bottom: Increased inside, Sole Material: Rubber",
-      "price": 40,
-      "discountPercentage": 16.96,
-      "rating": 4.14,
-      "stock": 72,
-      "brand": "IELGY fashion",
-      "category": "womens-shoes",
-      "thumbnail": "https://i.dummyjson.com/data/products/46/thumbnail.jpg",
+      "id": 67,
+      "title": "Fashion Magnetic Wrist Watch",
+      "description": "Buy this awesome  The product is originally manufactured by the company and it's a top selling product with a very reasonable",
+      "price": 60,
+      "discountPercentage": 16.69,
+      "rating": 4.03,
+      "stock": 46,
+      "brand": "Eastern Watches",
+      "category": "womens-watches",
+      "thumbnail": "https://i.dummyjson.com/data/products/67/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/46/1.webp",
-        "https://i.dummyjson.com/data/products/46/2.jpg",
-        "https://i.dummyjson.com/data/products/46/3.jpg",
-        "https://i.dummyjson.com/data/products/46/4.jpg",
-        "https://i.dummyjson.com/data/products/46/thumbnail.jpg"
-      ],
-      "quantity": 5,
-      "user": 1
-    },
-    {
-      "id": 81,
-      "title": "Round Silver Frame Sun Glasses",
-      "description": "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
-      "price": 19,
-      "discountPercentage": 10.1,
-      "rating": 4.94,
-      "stock": 78,
-      "brand": "Designer Sun Glasses",
-      "category": "sunglasses",
-      "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/81/1.jpg",
-        "https://i.dummyjson.com/data/products/81/2.jpg",
-        "https://i.dummyjson.com/data/products/81/3.jpg",
-        "https://i.dummyjson.com/data/products/81/4.webp",
-        "https://i.dummyjson.com/data/products/81/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/67/1.jpg",
+        "https://i.dummyjson.com/data/products/67/2.jpg",
+        "https://i.dummyjson.com/data/products/67/3.jpg",
+        "https://i.dummyjson.com/data/products/67/4.jpg",
+        "https://i.dummyjson.com/data/products/67/thumbnail.jpg"
       ],
       "quantity": 1,
       "user": 1
@@ -2494,49 +2519,27 @@
         "https://i.dummyjson.com/data/products/97/4.webp",
         "https://i.dummyjson.com/data/products/97/thumbnail.jpg"
       ],
-      "quantity": 3,
-      "user": 1
-    },
-    {
-      "id": 89,
-      "title": "Qualcomm original Car Charger",
-      "description": "best Quality CHarger , Highly Recommended to all best Quality CHarger , Highly Recommended to all",
-      "price": 40,
-      "discountPercentage": 17.53,
-      "rating": 4.2,
-      "stock": 79,
-      "brand": "TC Reusable",
-      "category": "automotive",
-      "thumbnail": "https://i.dummyjson.com/data/products/89/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/89/1.jpg",
-        "https://i.dummyjson.com/data/products/89/2.jpg",
-        "https://i.dummyjson.com/data/products/89/3.jpg",
-        "https://i.dummyjson.com/data/products/89/4.jpg",
-        "https://i.dummyjson.com/data/products/89/thumbnail.jpg"
-      ],
       "quantity": 1,
       "user": 1
     },
     {
-      "id": 39,
-      "title": "Women Sweaters Wool",
-      "description": "2021 Custom Winter Fall Zebra Knit Crop Top Women Sweaters Wool Mohair Cos Customize Crew Neck Women' S Crop Top Sweater",
-      "price": 600,
-      "discountPercentage": 17.2,
-      "rating": 4.55,
-      "stock": 55,
-      "brand": "Top Sweater",
-      "category": "tops",
-      "thumbnail": "https://i.dummyjson.com/data/products/39/thumbnail.jpg",
+      "id": 7,
+      "title": "Samsung Galaxy Book",
+      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+      "price": 1499,
+      "discountPercentage": 4.15,
+      "rating": 4.25,
+      "stock": 50,
+      "brand": "Samsung",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/39/1.jpg",
-        "https://i.dummyjson.com/data/products/39/2.jpg",
-        "https://i.dummyjson.com/data/products/39/3.jpg",
-        "https://i.dummyjson.com/data/products/39/4.jpg",
-        "https://i.dummyjson.com/data/products/39/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/7/1.jpg",
+        "https://i.dummyjson.com/data/products/7/2.jpg",
+        "https://i.dummyjson.com/data/products/7/3.jpg",
+        "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
       ],
-      "quantity": 3,
+      "quantity": 1,
       "user": 1
     }
   ],
@@ -2685,6 +2688,208 @@
         "pinCode": "560034"
       },
       "status": "pending",
-      "id": 2    }
+      "id": 2
+    },
+    {
+      "items": [
+        {
+          "id": 9,
+          "title": "Infinix INBOOK",
+          "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+          "price": 1099,
+          "discountPercentage": 11.83,
+          "rating": 4.54,
+          "stock": 96,
+          "brand": "Infinix",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/9/1.jpg",
+            "https://i.dummyjson.com/data/products/9/2.png",
+            "https://i.dummyjson.com/data/products/9/3.png",
+            "https://i.dummyjson.com/data/products/9/4.jpg",
+            "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1
+        }
+      ],
+      "totalAmount": 1099,
+      "totalItems": 1,
+      "user": {
+        "email": "fsagheer11@gmail.com",
+        "password": "Fatima12345",
+        "addresses": [
+          {
+            "name": "Fatima",
+            "email": "fsagheer11@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          },
+          {
+            "name": "Fatima ",
+            "email": "fsagheer11@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          },
+          {
+            "name": "Omer Haider Sagheer",
+            "email": "Sscomergyder28@gmail.com",
+            "phone": "3434434343",
+            "street": "Tehsil kaberwala village 5 kassi",
+            "city": "Kabirwala",
+            "state": "Punjab",
+            "pinCode": "58150"
+          }
+        ],
+        "id": 1
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Omer Haider Sagheer",
+        "email": "Sscomergyder28@gmail.com",
+        "phone": "3434434343",
+        "street": "Tehsil kaberwala village 5 kassi",
+        "city": "Kabirwala",
+        "state": "Punjab",
+        "pinCode": "58150"
+      },
+      "status": "pending",
+      "id": 3
+    },
+    {
+      "items": [
+        {
+          "id": 67,
+          "title": "Fashion Magnetic Wrist Watch",
+          "description": "Buy this awesome  The product is originally manufactured by the company and it's a top selling product with a very reasonable",
+          "price": 60,
+          "discountPercentage": 16.69,
+          "rating": 4.03,
+          "stock": 46,
+          "brand": "Eastern Watches",
+          "category": "womens-watches",
+          "thumbnail": "https://i.dummyjson.com/data/products/67/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/67/1.jpg",
+            "https://i.dummyjson.com/data/products/67/2.jpg",
+            "https://i.dummyjson.com/data/products/67/3.jpg",
+            "https://i.dummyjson.com/data/products/67/4.jpg",
+            "https://i.dummyjson.com/data/products/67/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1
+        }
+      ],
+      "totalAmount": 60,
+      "totalItems": 1,
+      "user": {
+        "email": "fsagheer11@gmail.com",
+        "password": "Fatima12345",
+        "addresses": [
+          {
+            "name": "Fatima ",
+            "email": "fsagheer11@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          },
+          {
+            "name": "Omer Haider Sagheer",
+            "email": "Sscomergyder28@gmail.com",
+            "city": "Kabirwaladcdncdknckd",
+            "state": "Punjab",
+            "pinCode": "58150",
+            "phone": "3434434343",
+            "street": "Tehsil kaberwala village 5 kassi"
+          }
+        ],
+        "id": 1
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Omer Haider Sagheer",
+        "email": "Sscomergyder28@gmail.com",
+        "city": "Kabirwaladcdncdknckd",
+        "state": "Punjab",
+        "pinCode": "58150",
+        "phone": "3434434343",
+        "street": "Tehsil kaberwala village 5 kassi"
+      },
+      "status": "pending",
+      "id": 4
+    },
+    {
+      "items": [
+        {
+          "id": 97,
+          "title": "Metal Ceramic Flower",
+          "description": "Metal Ceramic Flower Chandelier Home Lighting American Vintage Hanging Lighting Pendant Lamp",
+          "price": 35,
+          "discountPercentage": 10.94,
+          "rating": 4.93,
+          "stock": 146,
+          "brand": "Ifei Home",
+          "category": "lighting",
+          "thumbnail": "https://i.dummyjson.com/data/products/97/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/97/1.jpg",
+            "https://i.dummyjson.com/data/products/97/2.jpg",
+            "https://i.dummyjson.com/data/products/97/3.jpg",
+            "https://i.dummyjson.com/data/products/97/4.webp",
+            "https://i.dummyjson.com/data/products/97/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1
+        }
+      ],
+      "totalAmount": 35,
+      "totalItems": 1,
+      "user": {
+        "email": "fsagheer11@gmail.com",
+        "password": "Fatima12345",
+        "addresses": [
+          {
+            "name": "Fatima ",
+            "email": "fsagheer11@gmail.com",
+            "phone": "1234567788",
+            "street": "11th Main",
+            "city": "Banaglore",
+            "state": "Karnataka",
+            "pinCode": "560034"
+          },
+          {
+            "name": "Omer Haider Sagheer",
+            "email": "Sscomergyder28@gmail.com",
+            "city": "Kabirwaladcdncdknckd",
+            "state": "Punjab",
+            "pinCode": "58150",
+            "phone": "3434434343",
+            "street": "Tehsil kaberwala village 5 kassi"
+          }
+        ],
+        "id": 1
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Fatima ",
+        "email": "fsagheer11@gmail.com",
+        "phone": "1234567788",
+        "street": "11th Main",
+        "city": "Banaglore",
+        "state": "Karnataka",
+        "pinCode": "560034"
+      },
+      "status": "pending",
+      "id": 5
+    }
   ]
 }
