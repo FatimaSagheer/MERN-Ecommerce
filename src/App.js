@@ -14,6 +14,10 @@ import { fetchItemsByUserIdAsync } from './features/Cart/CartSlice';
 import {
   Route,BrowserRouter, Routes ,
 } from "react-router-dom";
+import PageNotFound from "./Pages/DeafultPage";
+import OredrSuccessPage from "./Pages/OrderSuccessPage";
+import Carosel from "./Pages/CaroselPage";
+import UserOrderPage from "./Pages/UserOrderPage";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
@@ -33,6 +37,11 @@ function App() {
           <Route path="/cart" element={<Protected><CartPage /></Protected>} />
           <Route path="/checkout" element={<Protected><CheckoutPage /></Protected>} />
           <Route path="/product-detail/:id" element={<Protected><ProductPage /></Protected>} />
+          <Route path="/orders" element={<UserOrderPage />} />
+          <Route path="/order-success/:id" element={<OredrSuccessPage/>} />
+          <Route path="/car" element={<Carosel />} />
+          <Route path="*" element={<PageNotFound />} />
+       
         </Routes>
       </BrowserRouter>
       {/* <RouterProvider router={router} /> */}
