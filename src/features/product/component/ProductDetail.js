@@ -4,11 +4,13 @@ import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 import { useSelector,useDispatch } from 'react-redux'
 import { fetchProductByIdAsync, fetchSelectedProducts,selectProductById
- 
+ ,selectProductListStatus 
 } from '../productListSlice';
 import { useParams } from 'react-router-dom';
 import { selectLoggedInUser } from '../../Auth/AuthSlice';
-import { addToCartAsync,selectItems  } from '../../Cart/CartSlice';
+import { addToCartAsync,selectItems   } from '../../Cart/CartSlice';
+import { useAlert } from 'react-alert';
+import { Grid } from 'react-loader-spinner';
 const colors=[
   { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
   { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
@@ -43,6 +45,8 @@ export default function ProductDetail() {
   const dispatch=useDispatch();
   const params=useParams()
   const items = useSelector(selectItems);
+  // const alert = useAlert();
+  const status = useSelector(selectProductListStatus);
    useEffect(()=>{
     dispatch(fetchProductByIdAsync(params.id))
    },[dispatch,params.id])
@@ -59,17 +63,30 @@ export default function ProductDetail() {
       delete newItem['id'];
       dispatch(addToCartAsync(newItem));
       // TODO: it will be based on server response of backend
-      alert.error('Item added to Cart');
+      // alert.error('Item added to Cart');
     } else {
-      alert.error('Item Already added');
+      // alert.error('Item Already added');
     }
   };
 
   return (
     <div className="bg-white">
+       {status === 'loading' ? (
+        <Grid
+          height="80"
+          width="80"
+          color="rgb(79, 70, 229) "
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      ) : null}
      { product && (<div className="pt-6">
         <nav aria-label="Breadcrumb">
-          <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          {/* <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"> */}
+          <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             {product.breadcrumbs && product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className="flex items-center">

@@ -24,9 +24,15 @@ import AdminHome from "./Pages/AdminHome";
 import AdminProductDetailPage from "./Pages/AdminProductDetail";
 import AdminProductFormPage from "./Pages/AdminProductForm";
 import AdminOrdersPage from "./Pages/AdminOrderPage";
+import { positions, Provider } from 'react-alert';
+import AlertTemplate from 'react-alert-template-basic';
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
+  const options = {
+    timeout: 5000,
+    position: positions.BOTTOM_LEFT,
+  };
 
   useEffect(() => {
     if (user) {
@@ -120,7 +126,14 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-      {/* <RouterProvider router={router} /> */}
+      {/* // */}
+
+    
+        <Provider template={AlertTemplate} {...options}>
+       
+        </Provider>
+
+      {/* // */}
     </div>
   );
 }
