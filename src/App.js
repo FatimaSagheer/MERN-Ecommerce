@@ -23,6 +23,7 @@ import ProtectedAdmin from "./features/Auth/components/ProtectedAdmin";
 import AdminHome from "./Pages/AdminHome";
 import AdminProductDetailPage from "./Pages/AdminProductDetail";
 import AdminProductFormPage from "./Pages/AdminProductForm";
+import AdminOrdersPage from "./Pages/AdminOrderPage";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
@@ -46,6 +47,14 @@ function App() {
           />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route
+            path="/admin/orders"
+            element={
+              <ProtectedAdmin>
+                <AdminOrdersPage></AdminOrdersPage>
+              </ProtectedAdmin>
+            }
+          />
           <Route
             path="/admin"
             element={
@@ -95,13 +104,12 @@ function App() {
             }
           />
           <Route
-           path= '/admin/product-form/edit/:id'
-           element= {
-            <ProtectedAdmin>
-            <AdminProductFormPage></AdminProductFormPage>
-          </ProtectedAdmin>
-           }
-            
+            path="/admin/product-form/edit/:id"
+            element={
+              <ProtectedAdmin>
+                <AdminProductFormPage></AdminProductFormPage>
+              </ProtectedAdmin>
+            }
           />
           <Route path="/orders" element={<UserOrderPage />} />
           <Route path="/profile" element={<UserProfilePage />} />

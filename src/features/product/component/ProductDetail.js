@@ -8,7 +8,7 @@ import { fetchProductByIdAsync, fetchSelectedProducts,selectProductById
 } from '../productListSlice';
 import { useParams } from 'react-router-dom';
 import { selectLoggedInUser } from '../../Auth/AuthSlice';
-import { addToCartAsync } from '../../Cart/CartSlice';
+import { addToCartAsync,selectItems  } from '../../Cart/CartSlice';
 const colors=[
   { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
   { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
@@ -42,13 +42,28 @@ export default function ProductDetail() {
   const user=useSelector(selectLoggedInUser)
   const dispatch=useDispatch();
   const params=useParams()
+  const items = useSelector(selectItems);
    useEffect(()=>{
     dispatch(fetchProductByIdAsync(params.id))
    },[dispatch,params.id])
-   const handleCart=(e)=>{
+   const handleCart = (e) => {
     e.preventDefault();
-    dispatch(addToCartAsync({...product,quantity:1,user:user.id })) 
-   }
+    if (items.findIndex((item) => item.productId === product.id) < 0) {
+      console.log({ items, product });
+      const newItem = {
+        ...product,
+        productId: product.id,
+        quantity: 1,
+        user: user.id,
+      };
+      delete newItem['id'];
+      dispatch(addToCartAsync(newItem));
+      // TODO: it will be based on server response of backend
+      alert.error('Item added to Cart');
+    } else {
+      alert.error('Item Already added');
+    }
+  };
 
   return (
     <div className="bg-white">

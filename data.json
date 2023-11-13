@@ -1832,7 +1832,7 @@
       "price": 47,
       "discountPercentage": 16,
       "rating": 4.74,
-      "stock": 133,
+      "stock": 0,
       "brand": "YIOSI",
       "category": "lighting",
       "thumbnail": "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
@@ -2541,6 +2541,28 @@
       ],
       "quantity": 1,
       "user": 1
+    },
+    {
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/2.jpg",
+        "https://i.dummyjson.com/data/products/2/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ],
+      "deleted": true,
+      "productId": 2,
+      "quantity": 1,
+      "user": 1,
+      "id": 98
     }
   ],
   "orders": [
@@ -2614,7 +2636,7 @@
         "state": "Karnataka",
         "pinCode": "560034"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 1
     },
     {
