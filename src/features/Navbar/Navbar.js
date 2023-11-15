@@ -21,6 +21,7 @@ const navigation = [
   { name: 'Products', link: '/', user: true },
   { name: 'Products', link: '/admin', admin: true },
   { name: 'Orders', link: '/admin/orders', admin: true },
+  { name: 'Category', link: '/admin/category', admin: true },
 ];
 const userNavigation = [
   { name: 'My Profile', link: '/profile' },
@@ -228,12 +229,16 @@ function NavBar({ children }) {
 
         <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              E-Commerce
+            <h1 className="text-4xl font-bold 
+            bg-gradient-to-r bg-clip-text  text-transparent 
+            from-teal-800 via-teal-600 to-teal-800
+            animate-text">
+              MERNifyCraft
             </h1>
           </div>
         </header>
-        <main className='bg-zinc-300'>
+        <main className=' bg-gradient-to-r  
+            from-teal-800 via-teal-600 to-teal-800'>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {children}
           </div>

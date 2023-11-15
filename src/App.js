@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+// import 'animate.css';
 import HomePage from "./Pages/HomePage";
 import LoginPage from "./Pages/LoginPage";
 import SignUpPage from "./Pages/SignUpPage";
@@ -26,6 +27,7 @@ import AdminProductFormPage from "./Pages/AdminProductForm";
 import AdminOrdersPage from "./Pages/AdminOrderPage";
 import { positions, Provider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
+import AdminCategoryPage from "./Pages/AdminCategoryPage"
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
@@ -117,6 +119,7 @@ function App() {
               </ProtectedAdmin>
             }
           />
+           <Route path="/admin/category" element={ <ProtectedAdmin><AdminCategoryPage /></ProtectedAdmin>}/>
           <Route path="/orders" element={<UserOrderPage />} />
           <Route path="/profile" element={<UserProfilePage />} />
           <Route path="/logout" element={<Logout />} />
@@ -124,6 +127,7 @@ function App() {
           <Route path="/order-success/:id" element={<OredrSuccessPage />} />
           <Route path="/car" element={<Carosel />} />
           <Route path="*" element={<PageNotFound />} />
+         
         </Routes>
       </BrowserRouter>
       {/* // */}
