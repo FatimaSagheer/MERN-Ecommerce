@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link ,Navigate} from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {selectLoggedInUser,createUserAsync} from '../AuthSlice'
-import logo from "../../../logo.png";
+import logo from "../../../images/logo-removebg-preview.png";
 
 export default function SignUp() {
   const {

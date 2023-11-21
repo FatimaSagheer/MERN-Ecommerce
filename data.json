@@ -1856,6 +1856,42 @@
         "https://i.dummyjson.com/data/products/6/thumbnail.png"
       ],
       "id": 101
+    },
+    {
+      "title": "dededed",
+      "description": "dededede",
+      "brand": "Impression of Acqua Di Gio",
+      "category": "fragrances",
+      "price": 23,
+      "discountPercentage": 23,
+      "stock": 2233,
+      "thumbnail": "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/100/1.jpg",
+        "https://i.dummyjson.com/data/products/100/1.jpg",
+        "https://i.dummyjson.com/data/products/100/1.jpg",
+        "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
+      ],
+      "rating": 0,
+      "id": 102
+    },
+    {
+      "title": "qwererde",
+      "description": "deded",
+      "brand": "Royal_Mirage",
+      "category": "mens-shirts",
+      "price": 1234,
+      "discountPercentage": 12,
+      "stock": 12,
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/8/2.jpg",
+        "https://i.dummyjson.com/data/products/4/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ],
+      "rating": 0,
+      "id": 103
     }
   ],
   "brands": [

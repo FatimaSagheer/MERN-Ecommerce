@@ -2,8 +2,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { addToCart ,fetchItemsByUserId,updateCart,deleteItemFromCart,resetCart} from './CartAPI';
 
 const initialState = {
-  items: [],
   status: 'idle',
+  items: [],
 };
 export const addToCartAsync = createAsyncThunk(
   'cart/addToCart',
@@ -15,9 +15,10 @@ export const addToCartAsync = createAsyncThunk(
 );
 export const fetchItemsByUserIdAsync = createAsyncThunk(
   'cart/fetchItemsByUserId',
-  async (userId) => {
-    const response = await fetchItemsByUserId(userId);
+  async () => {
+    const response = await fetchItemsByUserId();
     // The value we return becomes the `fulfilled` action payload
+console.log(response.data)
     return response.data;
   }
 );
@@ -50,27 +51,30 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
+    
 
   },
   extraReducers: (builder) => {
     builder
-      .addCase(addToCartAsync.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(addToCartAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        state.items.push(action.payload)
-      })
-      .addCase(fetchItemsByUserIdAsync.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchItemsByUserIdAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        state.items.push(action.payload)
-      })
+    .addCase(addToCartAsync.pending, (state) => {
+      state.status = 'loading';
+    })
+    .addCase(addToCartAsync.fulfilled, (state, action) => {
+      state.status = 'idle';
+      state.items.push(action.payload);
+    })
+    .addCase(fetchItemsByUserIdAsync.pending, (state) => {
+      state.status = 'loading';
+    })
+    .addCase(fetchItemsByUserIdAsync.fulfilled, (state, action) => {
+      state.status = 'idle';
+      state.items = action.payload;
+      state.cartLoaded = true;
+    })
+    .addCase(fetchItemsByUserIdAsync.rejected, (state, action) => {
+      state.status = 'idle';
+      state.cartLoaded = true;
+    })
       .addCase(updateCartAsync.pending, (state) => {
         state.status = 'loading';
       })

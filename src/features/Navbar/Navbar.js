@@ -8,8 +8,9 @@ import {
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../Cart/CartSlice';
-import logo from "../../logo.png"
-import {selectLoggedInUser} from "../Auth/AuthSlice"
+import logo from "../../images/Capture-removebg-preview.png";
+import {selectLoggedInUser} from "../Auth/AuthSlice";
+import { selectUserInfo } from '../User/UserSlice';
 
 const user = {
   name: 'Tom Cook',
@@ -37,6 +38,10 @@ function NavBar({ children }) {
 
   const items = useSelector(selectItems);
   const user = useSelector(selectLoggedInUser);
+  const itemuser =useSelector(selectUserInfo)
+
+  console.log(user)
+  console.log(itemuser)
 
   return (
     <>
@@ -50,7 +55,7 @@ function NavBar({ children }) {
                     <div className="flex-shrink-0">
                       <Link to="/">
                       <img
-                        className="h-12 w-12"
+                        className="h-14 w-14"
                         src={logo}
                         alt="Your Company"
                       />

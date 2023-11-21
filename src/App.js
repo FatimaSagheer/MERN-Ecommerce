@@ -28,6 +28,7 @@ import AdminOrdersPage from "./Pages/AdminOrderPage";
 import { positions, Provider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 import AdminCategoryPage from "./Pages/AdminCategoryPage"
+import { fetchLoggedInUserAsync } from './features/User/UserSlice';
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
@@ -39,8 +40,10 @@ function App() {
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(user.id));
     }
   }, [dispatch, user]);
+  console.log(user)
   return (
     <div className="App">
       <BrowserRouter>

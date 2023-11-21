@@ -1,7 +1,7 @@
 export function addOrder(order) {
     return new Promise(async (resolve) =>{
       //TODO: we will not hard-code server URL here
-      const response = await fetch('http://localhost:8081/orders',{
+      const response = await fetch('http://localhost:8080/orders/createOrder',{
         method: 'POST',
         body: JSON.stringify(order),
         headers: { 'content-type': 'application/json' },
@@ -13,7 +13,7 @@ export function addOrder(order) {
   }
   export function updateOrder(order) {
     return new Promise(async (resolve) => {
-      const response = await fetch('http://localhost:8081/orders/'+order.id, {
+      const response = await fetch('http://localhost:8080/orders/updateOrder'+order.id, {
         method: 'PATCH',
         body: JSON.stringify(order),
         headers: { 'content-type': 'application/json' },
@@ -35,7 +35,7 @@ export function addOrder(order) {
      return new Promise(async (resolve) => {
        //TODO: we will not hard-code server URL here
        const response = await fetch(
-         'http://localhost:8081/orders?' + queryString
+         'http://localhost:8080/orders/fetchAllOrders?' + queryString
        );
        const data = await response.json();
        const totalOrders = await response.headers.get('X-Total-Count');

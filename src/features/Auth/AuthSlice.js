@@ -17,22 +17,25 @@ export const createUserAsync = createAsyncThunk(
 );
 export const checkUserAsync = createAsyncThunk(
     'user/checkUser',
-    async (loginInfo) => {
-      const response = await checkUser(loginInfo);
-      console.log(response)
-      // The value we return becomes the `fulfilled` action payload
-      return response.data;
+    async (loginInfo, { rejectWithValue }) => {
+      try {
+        const response = await checkUser(loginInfo);
+        return response.data;
+      } catch (error) {
+        console.log(error);
+        return rejectWithValue(error);
+      }
     }
   );
-  export const updateUserAsync = createAsyncThunk(
-    'user/updateUser',
-    async (update) => {
-      const response = await updateUser(update);
-      console.log(response)
-      // The value we return becomes the `fulfilled` action payload
-      return response.data;
-    }
-  );
+  // export const updateUserAsync = createAsyncThunk(
+  //   'user/updateUser',
+  //   async (update) => {
+  //     const response = await updateUser(update);
+  //     console.log(response)
+  //     // The value we return becomes the `fulfilled` action payload
+  //     return response.data;
+  //   }
+  // );
   export const signOutAsync = createAsyncThunk(
     'user/signOut',
     async (loginInfo) => {
@@ -69,15 +72,15 @@ export const userSlice = createSlice({
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
         state.status = 'idle';
-        state.error = action.error;
-      }) 
-      .addCase(updateUserAsync.pending, (state) => {
-        state.status = 'loading';
+        state.error = action.payload;
       })
-      .addCase(updateUserAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        state.loggedInUser = action.payload;
-      })
+      // .addCase(updateUserAsync.pending, (state) => {
+      //   state.status = 'loading';
+      // })
+      // .addCase(updateUserAsync.fulfilled, (state, action) => {
+      //   state.status = 'idle';
+      //   state.loggedInUser = action.payload;
+      // })
       .addCase(signOutAsync.pending, (state) => {
         state.status = 'loading';
       })

@@ -46,6 +46,8 @@ export default function AdminProductDetail() {
   const dispatch = useDispatch();
   const params = useParams();
 
+  
+
   const handleCart = (e) => {
     e.preventDefault();
     const newItem = { ...product, quantity: 1, user: user.id };
